@@ -19,4 +19,14 @@
   - server/middleware/operation.go:操作日志?
 - 中间件是在server/initialize/router.go中以Router.Use(middleware) 的方式调用的
 - 鉴权:有一个casbin的策略,通过jwt就能确定是否有权调用api 可参见 [casbin](https://blog.csdn.net/weixin_51991615/article/details/123696937)
-- 
+
+
+- 方便的入门资料 包括中间件和鉴权的一部分这里都有讲 [gin入门](https://blog.csdn.net/abcnull/article/details/122806028)
+  - ```c.ShouldBindQuery(&struct{})``` query绑定struct
+  - ```c.Bind(&struct{})``` form绑定struct
+  - ```c.ShouldBindJSON(&struct{})``` json绑定struct
+  - ```c.Json(200, struct{})``` struct转json
+  - req/resp结构体中的tag
+    - form/json/query
+    - required：必填/omitempty：非必填
+    - 
